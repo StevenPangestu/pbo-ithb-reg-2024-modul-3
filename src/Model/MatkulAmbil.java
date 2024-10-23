@@ -2,14 +2,12 @@ package Model;
 
 import java.util.*;
 
-public class MatkulAmbil extends Matakuliah {
+public class MatkulAmbil {
     private Matakuliah matkul;
     private List<PresensiMahasiswa> presensi;
     private int n1, n2, n3;
 
-    public MatkulAmbil(String kode, String SKS, String nama, Matakuliah matkul, List<PresensiMahasiswa> presensi,
-            int n1, int n2, int n3) {
-        super(kode, SKS, nama);
+    public MatkulAmbil(Matakuliah matkul, List<PresensiMahasiswa> presensi, int n1, int n2, int n3) {
         this.matkul = matkul;
         this.presensi = presensi;
         this.n1 = n1;
@@ -60,9 +58,8 @@ public class MatkulAmbil extends Matakuliah {
     @Override
     public String toString() {
         return "MatkulAmbil [matkul=" + matkul + ", presensi=" + presensi + ", n1=" + n1 + ", n2=" + n2 + ", n3=" + n3
-                + ", getNama()=" + getNama() + ", getKode()=" + getKode() + ", getSKS()=" + getSKS() + ", getMatkul()="
-                + getMatkul() + ", getPresensi()=" + getPresensi() + ", getN1()=" + getN1() + ", getN2()=" + getN2()
-                + ", getN3()=" + getN3() + "]";
+                + ", getMatkul()=" + getMatkul() + ", getPresensi()=" + getPresensi() + ", getN1()=" + getN1()
+                + ", getN2()=" + getN2() + ", getN3()=" + getN3() + "]";
     }
 
 }

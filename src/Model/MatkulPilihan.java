@@ -1,11 +1,11 @@
 package Model;
 
 public class MatkulPilihan extends Matakuliah {
-    int minimumMHS;
+    private int minimumMHS;
 
-    public MatkulPilihan(String kode, String SKS, String nama, int minimum) {
-        super(kode, SKS, nama);
-        this.minimumMHS = minimum;
+    public MatkulPilihan(String kode, String nama, int sKS, int minimumMHS) {
+        super(kode, nama, sKS);
+        this.minimumMHS = minimumMHS;
     }
 
     public int getMinimumMHS() {

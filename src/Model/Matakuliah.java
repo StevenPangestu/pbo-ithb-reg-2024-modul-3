@@ -2,20 +2,13 @@ package Model;
 
 public class Matakuliah {
 
-    private String kode, SKS, nama;
+    private String kode, nama;
+    private int SKS;
 
-    public Matakuliah(String kode, String SKS, String nama) {
+    public Matakuliah(String kode, String nama, int sKS) {
         this.kode = kode;
-        this.SKS = SKS;
         this.nama = nama;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
+        SKS = sKS;
     }
 
     public String getKode() {
@@ -26,12 +19,26 @@ public class Matakuliah {
         this.kode = kode;
     }
 
-    public String getSKS() {
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public int getSKS() {
         return SKS;
     }
 
-    public void setSKS(String sKS) {
+    public void setSKS(int sKS) {
         SKS = sKS;
+    }
+
+    @Override
+    public String toString() {
+        return "Matakuliah [kode=" + kode + ", nama=" + nama + ", SKS=" + SKS + ", getKode()=" + getKode()
+                + ", getNama()=" + getNama() + ", getSKS()=" + getSKS() + ", getClass()=" + getClass() + "]";
     }
 
 }
